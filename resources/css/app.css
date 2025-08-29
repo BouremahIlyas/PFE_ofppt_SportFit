@@ -1,0 +1,51 @@
+/* Import Swiper styles first */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/effect-fade'; /* If you use fade effect */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom SwiperJS Styles - These can stay here or be moved below Tailwind utilities */
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+    color: #ffffff; /* White arrows */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    width: 44px; /* Adjust size */
+    height: 44px; /* Adjust size */
+    border-radius: 50%; /* Make them circular */
+    transition: background-color 0.3s ease;
+    top: 50%; /* Ensure vertical centering */
+    transform: translateY(-50%);
+}
+
+.hero-swiper .swiper-button-prev:hover,
+.hero-swiper .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next::after {
+    font-size: 1.25rem; /* Adjust arrow icon size */
+}
+
+.hero-swiper .swiper-pagination-bullet {
+    background-color: #ffffff;
+    opacity: 0.7;
+    width: 10px; /* Adjust size */
+    height: 10px; /* Adjust size */
+    margin: 0 5px !important; /* Add spacing between bullets */
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #6366f1; /* Indigo, or your theme color */
+}
+
+/* Ensure pagination is visible */
+.hero-swiper .swiper-pagination {
+    bottom: 20px !important; /* Adjust position from bottom */
+}
+
